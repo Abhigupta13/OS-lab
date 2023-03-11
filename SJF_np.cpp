@@ -18,7 +18,6 @@ void calculate_avg_times(Process processes[], int n) {
     int total_turnaround_time = 0, total_waiting_time = 0;
     for (int i = 0; i < n; i++) {
         processes[i].turnaround_time = processes[i].completion_time - processes[i].arrival_time;
-        cout<< processes[i].turnaround_time << " ";
         processes[i].waiting_time = processes[i].turnaround_time - processes[i].burst_time;
         total_turnaround_time += processes[i].turnaround_time;
         total_waiting_time += processes[i].waiting_time;

@@ -19,8 +19,8 @@ public:
 void calculate_avg_times(vector<Process> processes) {
     int total_turnaround_time = 0, total_waiting_time = 0;
     for (int i = 0; i< processes.size(); i++) {
-        processes[i].turnaround_time = processes[i].completion_time - processes[i].arrival_time;
-        processes[i].waiting_time = processes[i].turnaround_time - processes[i].burst_time;
+        processes[i].turnaround_time = processes[i].completion_time + processes[i].arrival_time;
+        processes[i].waiting_time = processes[i].turnaround_time + processes[i].burst_time;
         total_turnaround_time += processes[i].turnaround_time;
         total_waiting_time += processes[i].waiting_time;
     }

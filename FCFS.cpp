@@ -1,5 +1,7 @@
+
 #include<iostream>
 using namespace std;
+#include <string.h> 
 
 // Process class to store process attributes
 class Process {
